@@ -1,0 +1,88 @@
+---
+layout: default
+top_bar: white
+title: News
+description: News and announcements.
+no_footer: true
+list_page: true
+---
+
+{% assign news = site.data.contentful.news.news %} 
+{% assign all_authors = "" | split: "" %} 
+{% assign all_publications = "" | split: "" %} 
+{% assign all_types = "" | split: "" %} 
+
+{% for item in news %} 
+  {% for author in item.engelberg_author %} 
+    {% assign all_authors = all_authors | push: author %} 
+  {% endfor %} 
+  {% assign all_publications = all_publications | push: item.publication %} 
+  {% assign all_types = all_types | push: item.publication_type %} 
+{% endfor %} 
+
+{% assign all_authors = all_authors| compact | sort: "last_name" | map: "display_name" | uniq %}
+{% assign all_publications = all_publications | uniq | compact | sort %} 
+{% assign all_types = all_types | uniq | compact | sort %}
+
+<!-- LAYOUT 9: Lists  -->
+<main id="main" class="news-list-page">
+  {% include components/nav-button.html %}
+  <section id="news-list">
+    <div class="row expanded no-padding list-row">
+      <aside class="list-aside filter-container">
+        <div class="column large-offset-2">
+          <h1>{{ page.title }}</h1>
+
+          {% include components/mobile-list-results.html class_name="engelberg-center-news-filter" %}
+
+          <div class="bar"></div>
+
+          <span class="search-title">Filters</span>
+          <button id="clear-filters" class="clear-filters">Clear all</button>
+
+          <div class="dropdown-container">
+            <div class="dropdown-component">
+              {% include components/dropdown.html content=all_authors component_id="news-item-center-author"
+              component_name="news-item-center-author" component_default="All Center People"
+              component_label_class="visually-hidden" %}
+            </div>
+          </div>
+
+          <div class="dropdown-container">
+            <div class="dropdown-component">
+              {% include components/dropdown.html content=all_publications component_id="news-item-publication"
+              component_name="news-item-publication" component_default="All Publications"
+              component_prefix="pub"
+              component_label_class="visually-hidden" %}
+            </div>
+          </div>
+
+          <div class="dropdown-container">
+            <div class="dropdown-component">
+              {% include components/dropdown.html content=all_types component_id="news-item-type"
+              component_name="news-item-type" component_default="All News" component_label_class="visually-hidden" %}
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="column list-container">
+        <h2>Results</h2>
+        {% include components/list-results.html %}
+        <div class="date-toggle-container">
+          <button
+            id="date-sort"
+            type="button"
+            class="button__date-sort js-sort sort {{ class_names }}"
+            data-sort="timestamp"
+          >
+            Date
+          </button>
+        </div>
+
+        <div class="list">
+          {% for news_item in news %} {% include components/news-list-item.html item=news_item %} {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
