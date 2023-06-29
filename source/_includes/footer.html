@@ -1,26 +1,22 @@
 <footer>
   <div class="row expanded footer">
     <div class="column large-3 small-12">
-      <img class="footer--logo" src="{{ '/images/ec-logo.svg' | relative_url }}" alt="Engelberg Center logo">
+      <img class="footer--logo" src="{{ '/images/ec-logo.svg' | relative_url }}" alt="Engelberg Center logo" />
       <div class="footer--about">{{ site.data.contentful.index.index[0].footer_blurb | markdownify }}</div>
     </div>
     <div class="column large-5 small-12">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
     </div>
     <div class="column large-4 small-12 footer--nav">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/our-mission' | relative_url }}">Our Mission</a>
-      <a href="{{ '/our-people' | relative_url }}">Our People</a>
-      <a href="{{ '/what-we-do' | relative_url }}">What We Do</a>
-      <a href="{{ '/for-students' | relative_url }}">For Students</a>
-      <a href="{{ '/events' | relative_url }}">Events</a>
-      <a href="{{ '/outputs' | relative_url }}">Outputs</a>
-      <a href="{{ '/news' | relative_url }}">News</a>
-      <a href="{{ '/projects' | relative_url }}">Projects</a>
-      <a href="{{ '/getting-involved' | relative_url }}">Getting Involved</a>
-      <a href="{{ '/what-were-reading' | relative_url }}">What We're Reading</a>
-      <a href="https://www.nyu.edu/footer/accessibility.html">Accessibility</a>
-      <a href="https://www.nyu.edu/footer/copyright-and-fair-use/digital-privacy-statement.html">Privacy Policy</a>
+      {% for nav_item in main_nav.nav_items %}
+      <a href="{{ nav_item.nav_item_path | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
+      {% endfor %}
     </div>
   </div>
 </footer>
