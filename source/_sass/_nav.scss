@@ -1,4 +1,4 @@
-.nav-is-active > .main-nav a {
+.nav-is-active>.main-nav a {
   display: block;
 }
 
@@ -7,8 +7,9 @@
     border-radius: 0;
     height: 3.5rem;
   }
+
   padding-top: 96px;
-  background-color: $purple-100 !important;
+  background-color: $black !important;
   width: 350px;
   height: 100vh;
   position: fixed;
@@ -26,6 +27,7 @@
     width: 10.5rem;
     height: 3.5rem;
     padding: 0 0.5rem;
+
     img {
       position: inherit;
       height: 100%;
@@ -60,13 +62,14 @@
     width: 5rem;
     font-size: 2rem;
     max-width: 2rem;
+
     span {
       padding: 16px 4px;
     }
   }
 
   .close-nav {
-    background-color: $purple-100;
+    background-color: $black;
     cursor: pointer;
     color: $white;
     font-size: 2rem;
@@ -88,13 +91,14 @@
   &:focus {
     outline: 5px auto -webkit-focus-ring-color;
   }
+
   .menu-button__decorator.material-icons {
     font-size: 3rem;
     color: $white;
     display: inline;
     vertical-align: bottom;
     border-radius: 0;
-    background-color: $purple-100;
+    background-color: $black;
     height: 100%;
     padding-top: 4px;
   }
@@ -103,7 +107,7 @@
     text-transform: uppercase;
     padding: 1rem;
     background-color: $white;
-    color: $purple-100;
+    color: $black;
     font-family: $sans-serif;
     font-weight: bold;
     font-size: 1.3rem;
@@ -112,7 +116,7 @@
 
 .menu-item {
   background-color: $white;
-  color: $purple-100;
+  color: $black;
   padding: 1rem 0.7rem 41px;
   font-family: $sans-serif;
   font-weight: bold;
@@ -136,9 +140,11 @@ main {
 .main-active {
   transform: translateX(350px);
 }
+
 .open-nav {
   transition: margin-left 0.2s ease;
 }
-.nav-is-active > .open-nav {
+
+.nav-is-active>.open-nav {
   margin-left: 350px;
 }
