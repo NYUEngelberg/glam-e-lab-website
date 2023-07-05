@@ -31,7 +31,7 @@
 
 /* GLOBAL Card Styles */
 .card {
-  background-color: transparentize($gray-200, 0.1);
+  background-color: transparentize($blue-100, 0.1);
   font-family: $sans-serif;
   box-shadow: 10px 10px 30px #00000033;
   border-radius: 16px;
@@ -436,6 +436,7 @@
 // FEATURED CARDS
 .card--featured {
   padding: 2rem;
+  color: $white;
 
   .card__meta {
     display: flex;

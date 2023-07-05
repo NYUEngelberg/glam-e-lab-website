@@ -1,6 +1,6 @@
 .top-bar {
   &__button--gray {
-    color: $gray-100;
+    // color: $gray-100;
   }
 }
 
@@ -28,6 +28,7 @@
 
   .js-trigger-menu {
     color: gray;
+
     &--right {
       background-color: orange;
       font-size: 2rem;
@@ -58,11 +59,11 @@
   background-color: transparent;
 }
 
-.top-bar--no-logo > .top-bar__logo-container {
+.top-bar--no-logo>.top-bar__logo-container {
   display: none;
 }
 
-.top-bar--white > .top-bar__logo-container {
+.top-bar--white>.top-bar__logo-container {
   display: flex;
 }
 
@@ -168,6 +169,7 @@
   }
 
   border-radius: 0;
+
   .filter-decorator {
     &::before {
       @extend .u-material-icons;
@@ -176,6 +178,7 @@
       color: $white;
     }
   }
+
   .filter-decorator.js-active {
     &::before {
       @extend .u-material-icons;
