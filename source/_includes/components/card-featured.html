@@ -3,10 +3,7 @@
 {% assign path = include.path %}
 {% assign card_action = include.card_action %}
 
-<div class="card card--featured">
-
-
-
+<div class="card card--featured ">
   <!-- {% if card.publication_date %}
   <div class="card__date-container">
     {{ card.publication_date | date: "%B %d, %Y" }}
@@ -33,6 +30,7 @@
     </div>
  
     <div class="card__authors">
+      Testing
       {% if card.full_author %}
         <span class="card__author">{{ card.full_author | markdownify }}</span>
       {% else %}
@@ -60,11 +58,11 @@
     </div>
   <div class="card__action">
     {% if card.external_url and card.external_url.size != 0%}
-      <a href="{{ card.external_url }}" class="link link--arrow">
+      <a href="{{ card.external_url }}" class="link link--arrow inverted">
         {% if card_action%}{{card_action}}{% else %}{{ 'Read More' }}{% endif%}
       </a>
     {% else %}
-      <a href="{{ card.pretty_url | prepend: path | relative_url }}" class="link link--arrow">
+      <a href="{{ card.pretty_url | prepend: path | relative_url }}" class="link link--arrow inverted">
         {% if card_action%}{{card_action}}{% else %}{{ 'Read More' }}{% endif%}
       </a>
       {% endif %}

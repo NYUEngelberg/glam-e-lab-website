@@ -1,19 +1,22 @@
+.styleguide-header {
+  background-color: $yellow-100;
+}
 
-  
-  .styleguide-header {
-    background-color: $pink-100;
-  }
-  .wrap__container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .block__container {
-    display: block;
-  }
+.wrap__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-  pre { font-size: 1rem; }
-  /*
+.block__container {
+  display: block;
+}
+
+pre {
+  font-size: 1rem;
+}
+
+/*
   Color swatches
   ========================================================================== */
 
@@ -35,15 +38,30 @@
 /*
    Background colors
    ========================================================================== */
-   $color: ("white", $white), ("black", $black), ("black-50", $black-50), ("gray-100", $gray-100), ("gray-200", $gray-200), ("gray-300", $gray-300),("purple-100", $purple-100), ("blue-100", $blue-100), ("green-100", $green-100), ("orange-100", $orange-100), ("yellow-100", $yellow-100), ("pink-100", $pink-100), ("sky-blue-100", $sky-blue-100);
+$color: (
+  "white",
+  $white),
+  ("black", $black),
+  ("black-50", $black-50),
+  ("gray-100", $gray-100),
+  ("gray-200", $gray-200),
+  ("gray-300", $gray-300),
+  ("purple-100", $purple-100),
+  ("blue-100", $blue-100),
+  ("green-100", $green-100),
+  ("orange-100", $orange-100),
+  ("yellow-100", $yellow-100),
+  ("pink-100", $pink-100),
+  ("sky-blue-100", $sky-blue-100
+);
 
-  @each $name, $bgcolor in $color {
-    .color__tile--#{$name} {
-      background-color: $bgcolor;
-    }
+@each $name,
+$bgcolor in $color {
+  .color__tile--#{$name} {
+    background-color: $bgcolor;
   }
+}
 
 /*
    Headings
    ========================================================================== */
-
