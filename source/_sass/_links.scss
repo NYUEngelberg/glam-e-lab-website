@@ -17,7 +17,7 @@ a.link--secondary {
   font-family: $sans-serif;
   text-decoration: none;
   font-size: $helper;
-  font-weight: 700;
+  font-weight: $bold;
 
   &:after {
     transition-duration: 0.4s;

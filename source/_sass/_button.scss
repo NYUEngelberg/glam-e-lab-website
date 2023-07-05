@@ -25,11 +25,13 @@
     border-color: $white;
     background-color: $black;
   }
+
   &--close:after {
     @extend .u-material-icons;
     content: 'close';
     display: inline-block;
   }
+
   &__sort {
     &--ascending:after {
       @extend .u-material-icons;
@@ -37,6 +39,7 @@
       display: inline-block;
       vertical-align: -6px;
     }
+
     &--descending:after {
       @extend .u-material-icons;
       content: 'keyboard_arrow_down';
@@ -53,6 +56,7 @@
 .button--arrow {
   padding-bottom: 0.65rem;
   padding-right: 0.65rem;
+  font-weight: $bold;
 
   &:after {
     transition-duration: 0.4s;
@@ -61,7 +65,8 @@
     vertical-align: bottom;
     margin-left: 0.4rem;
     transform: scale(0.8);
-    margin-bottom: -2px;
+    margin-top: 2px;
+    // margin-bottom: -2px;
   }
 
   &:hover {
