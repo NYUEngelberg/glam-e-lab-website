@@ -1,5 +1,4 @@
-$serif: 'EB Garamond', serif;
-$sans-serif: 'Roboto Condensed', sans-serif;
+$sans-serif: 'Cooper Hewitt', sans-serif;
 
 h1,
 h2,
@@ -8,7 +7,7 @@ h4,
 h5,
 h6 {
   font-family: $sans-serif;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h1,
@@ -31,7 +30,7 @@ $p: 1.2rem;
 $helper: 1rem;
 
 
-$bold: 700;
+$bold: 800;
 $regular: 400;
 $light: 300;
 
@@ -63,7 +62,7 @@ h6 {
 
 p {
   font-size: $p;
-  font-family: $serif;
+  font-family: $sans-serif;
   font-weight: 400;
 }
 
@@ -93,11 +92,11 @@ p.helper.inactive {
 
 .heading-c {
   // sans serif all caps bold small
-  font-family: $sans-serif;
-  font-weight: $bold;
+  // font-family: $sans-serif;
   text-transform: uppercase;
   font-size: $h5;
   margin: .5rem;
+  font-weight: $bold;
 }
 
 .page-section--topic {

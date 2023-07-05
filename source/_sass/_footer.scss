@@ -199,7 +199,7 @@ footer {
   a {
     color: $white;
     display: inline;
-    font-family: $serif;
+    font-family: $sans-serif;
     font-size: $p;
   }
 
@@ -219,15 +219,18 @@ footer {
     p {
       margin: 0;
       color: $white;
-      font-family: $serif;
+      font-family: $sans-serif;
       font-size: $p;
+
       @include breakpoint($large) {
         display: inline-block;
       }
+
       a {
         @include markdown-primary-links;
       }
     }
+
     p:not(:first-of-type) {
       @include breakpoint($large) {
         &:before {
@@ -236,14 +239,17 @@ footer {
         }
       }
     }
+
     table {
       color: $white;
-      font-family: $serif;
+      font-family: $sans-serif;
       font-size: $p;
+
       a {
         @include markdown-primary-links;
       }
-      tr  {
+
+      tr {
         td:not(:first-of-type) {
           &:before {
             content: '|';

@@ -448,7 +448,6 @@
 
     .card__date-container {
       font-size: $h6;
-      font-weight: $bold;
     }
 
     .card__tags-container,
@@ -469,6 +468,7 @@
       display: flex;
       flex-direction: column;
       @include all_caps_text;
+      font-weight: $bold;
 
       .card__author {
         margin: 0;
@@ -508,7 +508,7 @@
       width: 100%;
     }
 
-    font-family: $serif;
+    font-family: $sans-serif;
     font-weight: 300;
     font-size: $p;
   }
