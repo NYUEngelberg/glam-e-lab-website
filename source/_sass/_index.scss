@@ -116,6 +116,14 @@
       padding-bottom: 5rem;
     }
   }
+
+  .section--light-gray {
+    background-color: $white;
+
+    .card {
+      background-color: $white;
+    }
+  }
 }
 
 .twitter-feed__container {
