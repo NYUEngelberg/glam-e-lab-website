@@ -52,17 +52,17 @@ collections:
 
 contentful:
   spaces:
-    # - index:
-    #     space: ENV_GLAMELAB_CONTENTFUL_SPACE_ID
-    #     access_token: ENV_GLAMELAB_CONTENTFUL_ACCESS_TOKEN
-    #     base_path: ./source
-    #     destination: /contentful
-    #     all_entries: true
-    #     cda_query:
-    #       content_type: index
-    #     client_options:
-    #       max_include_resolution_depth: 2
-    #       reuse_entries: false
+    - index:
+        space: ENV_GLAMELAB_CONTENTFUL_SPACE_ID
+        access_token: ENV_GLAMELAB_CONTENTFUL_ACCESS_TOKEN
+        base_path: ./source
+        destination: /contentful
+        all_entries: true
+        cda_query:
+          content_type: index
+        client_options:
+          max_include_resolution_depth: 2
+          reuse_entries: false
     - nav:
         space: ENV_GLAMELAB_CONTENTFUL_SPACE_ID
         access_token: ENV_GLAMELAB_CONTENTFUL_ACCESS_TOKEN

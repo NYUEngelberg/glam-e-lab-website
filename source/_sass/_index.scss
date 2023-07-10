@@ -67,6 +67,8 @@
     &--right {
       justify-content: right;
     }
+
+    &--full-width {}
   }
 
   .card--podcast {
@@ -100,6 +102,12 @@
 
     @include breakpoint($small-only) {
       padding-bottom: 5rem;
+    }
+
+    .intro-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
