@@ -55,17 +55,36 @@ footer {
         padding: 1rem 1rem;
       }
 
+      @include breakpoint($large) {
+        padding-left: 10rem;
+      }
+
+      @include breakpoint($between-large) {
+        padding-left: 6rem;
+      }
+
       a {
         display: block;
         text-decoration: none;
         font-size: 21px;
-        font-weight: bold;
+        font-weight: $bold;
         font-family: $sans-serif;
         margin-bottom: 1.5rem;
 
         &:hover {
           color: $yellow-100;
         }
+      }
+
+    }
+
+    &--blurb {
+      p:first-of-type {
+        margin-top: 0;
+      }
+
+      @include breakpoint($medium-only) {
+        padding-top: 2rem;
       }
     }
 
