@@ -1,25 +1,26 @@
 {% assign people = include.people %}
 
-{% assign faculty_cards = people | where: 'type', 'Faculty Co-Directors' | sort: "last_name" %}
+{% assign current_cards = people | where: 'type', 'Current' | sort: "last_name" %}
 
-{% if faculty_cards and faculty_cards.size != 0%}
+{% if current_cards and current_cards.size != 0%}
   {% include components/generic-card-layout.html 
-    cards=faculty_cards
-    cards_heading="Faculty Co-Directors"
+    cards=current_cards
+    cards_heading="Current"
     cards_type="people_cards"
   %}
 {% endif %}
 
-{% assign affiliated_faculty = people | where: 'type', 'Affiliated Faculty' | sort: "last_name"  %}
+{% assign alumni_cards = people | where: 'type', 'Alumni' | sort: "last_name"  %}
 
-{% if affiliated_faculty and affiliated_faculty.size != 0 %}
+{% if alumni_cards and alumni_cards.size != 0 %}
   {% include components/generic-card-layout.html 
-    cards=affiliated_faculty
-    cards_heading="Affiliated Faculty"
+    cards=alumni_cards
+    cards_heading="Engelberg Center Community Alumni"
     cards_type="people_cards"
   %}
 {% endif %}
 
+{%comment%}
 {% assign staff_cards = people | where: 'type', 'Staff' | sort: "last_name"  %}
 
 {% if staff_cards and staff_cards.size != 0 %}
@@ -90,3 +91,5 @@
       cards_alumni=true
     %}
 {% endif %}
+
+{%endcomment%}

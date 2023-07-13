@@ -82,7 +82,7 @@
   <div class="cards-wrapper">
     {% for card in cards %}
     <div class="card card--people">
-      <a class="card-link-wrapper" href="{{ card.pretty_url | prepend: '/our-people/' | relative_url }}">
+      <a class="card-link-wrapper" href="{{ card.pretty_url | prepend: '/who-we-are/' | relative_url }}">
         <div class="card__avatar-wrapper">
           <div class="card__avatar">
             <img
@@ -90,7 +90,7 @@
               alt="{{card.display_name}} Image"
             />
           </div>
-          <div class="bar" style="background-image: url({{ card.bar_color.url }})"></div>
+          <div class="bar" style="background-image: url({{ card.icon.url }})"></div>
         </div>
         <div class="card__detail">
           <span class="card__name">{{ card.display_name }}</span>
