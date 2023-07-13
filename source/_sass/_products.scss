@@ -46,6 +46,12 @@
     }
   }
 
+  .product__authors {
+    p {
+      font-weight: $bold;
+    }
+  }
+
   .product__subtitle {
     font-family: $sans-serif;
     font-size: $h3;
@@ -171,6 +177,8 @@
         .button {
           display: block;
           width: 85%;
+          font-weight: $bold;
+          padding-top: 0.8rem;
 
           @include breakpoint($small-only) {
             width: 100%;
@@ -179,6 +187,12 @@
 
         .product__authors {
           display: block;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-top: 4rem;
+          margin-bottom: 1rem;
         }
       }
 
@@ -189,6 +203,7 @@
         font-family: $sans-serif;
         margin-bottom: 0.5rem;
         font-size: $helper;
+        font-weight: $bold;
 
         &:hover,
         &:focus {
