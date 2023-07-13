@@ -6,7 +6,9 @@
       <a class="home-icon" href="/" aria-label="home"><span class="material-icons">home</span></a>
     </div>
   </div>
+
+  {{main_nav.nav_items}}
   {% for nav_item in main_nav.nav_items %}
-    <a class="link" href="{{ nav_item.nav_item_path | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
+    <a class="link" href="{{ nav_item.pretty_url | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
   {% endfor %}
 </nav>

@@ -8,7 +8,7 @@
     </div>
     <div class="column large-4 small-12 footer--nav">
       {% for nav_item in main_nav.nav_items %}
-        <a href="{{ nav_item.nav_item_path | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
+        <a href="{{ nav_item.pretty_url | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
       {% endfor %}
     </div>
   </div>
