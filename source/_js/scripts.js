@@ -11,7 +11,7 @@ Nav.init();
 Overlay.init();
 Utils.markdownLinksNewPage();
 
-if (window.location.pathname.includes('/outputs/')) {
+if (window.location.pathname.includes('/products/')) {
   if (document.querySelector('.product-page')) {
     Footnotes.init();
     FixedNav.init();
