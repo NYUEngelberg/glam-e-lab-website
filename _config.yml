@@ -106,14 +106,26 @@ contentful:
           content_type: people
         client_options:
           max_include_resolution_depth: 2
-          reuse_entries: false          
+          reuse_entries: false
+    - figure:
+        space: ENV_GLAMELAB_CONTENTFUL_SPACE_ID
+        access_token: ENV_GLAMELAB_CONTENTFUL_ACCESS_TOKEN
+        base_path: ./source
+        destination: /contentful
+        all_entries: true
+        cda_query:
+          content_type: figure
+        client_options:
+          max_include_resolution_depth: 2
+          reuse_entries: false      
+
 page_gen:
   - data: 'data.contentful.product.product'
     template: 'product'
     name: 'pretty_url'
     dir: 'products'
-    # customSeoImage: 'seo_image'
-    # customSeoDescription: 'seo_description'
+    customSeoImage: 'seo_image'
+    customSeoDescription: 'seo_description'
   - data: 'data.contentful.genericPage.genericPage'
     template: 'generic'
     name: 'pretty_url'
