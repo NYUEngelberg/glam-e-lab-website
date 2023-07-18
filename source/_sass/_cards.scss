@@ -181,7 +181,7 @@
     left: 2rem;
 
     .card__title {
-      font-weight: 700;
+      font-weight: $bold;
       font-size: $p;
     }
 
@@ -194,6 +194,16 @@
       @include all_caps_text;
       font-weight: 700;
       font-size: $helper !important;
+    }
+  }
+}
+
+.card--research {
+  background-color: $white;
+
+  .card__detail {
+    span {
+      color: $black;
     }
   }
 }
@@ -338,11 +348,16 @@
   .card__title {
     margin: 8px 0;
     font-size: $p;
+    text-decoration: none;
   }
 
   .card__description {
     font-size: $p;
     font-weight: 300;
+
+    p {
+      color: $white;
+    }
   }
 
   .card__author,
@@ -354,10 +369,11 @@
   span,
   .card__author>p {
     font-family: $sans-serif;
-    font-weight: 700;
+    font-weight: $bold;
     display: block;
     margin: 1rem 0;
     font-size: $p;
+    color: $white;
   }
 
   .card__date {
@@ -490,6 +506,7 @@
     font-weight: $bold;
     margin: 2rem 0;
     display: block;
+    color: $white;
   }
 
   .card__subtitle {
