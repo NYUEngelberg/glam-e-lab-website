@@ -117,6 +117,17 @@ contentful:
           content_type: figure
         client_options:
           max_include_resolution_depth: 2
+          reuse_entries: false
+    - onTopic:
+        space: ENV_GLAMELAB_CONTENTFUL_SPACE_ID
+        access_token: ENV_GLAMELAB_CONTENTFUL_ACCESS_TOKEN
+        base_path: ./source
+        destination: /contentful
+        all_entries: true
+        cda_query:
+          content_type: onTopic
+        client_options:
+          max_include_resolution_depth: 2
           reuse_entries: false      
 
 page_gen:
