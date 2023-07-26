@@ -222,7 +222,9 @@
 
 /* PROJECT CARDS with image, title, description */
 .card--project,
-.card--book {
+.card--book,
+.card--collaborator
+ {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -231,8 +233,10 @@
     border-radius: 16px 16px 0 0;
     height: 15rem;
     min-height: 15rem;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
+    margin: 0 2rem;
   }
 }
 
@@ -373,7 +377,6 @@
     display: block;
     margin: 1rem 0;
     font-size: $p;
-    color: $white;
   }
 
   .card__date {
