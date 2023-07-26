@@ -142,15 +142,14 @@
   </div>
   <div class="cards-wrapper">
     {% for card in cards %}
-    <div class="card card--project">
-      <a class="card-link-wrapper" href="{{ card.pretty_url | prepend: 'projects/' | relative_url }}">
+    <div class="card card--project card--collaborator">
+      <a class="card-link-wrapper" target="_blank" href="{{ card.external_url}}">
         <div
           class="card__image"
-          style="background-image: url({{card.project_image.url}})"
+          style="background-image: url({{card.logo.url}})"
         ></div>
         <div class="card__detail">
-          <span class="card__title">{{ card.title }}</span>
-          <span class="card__description">{{ card.blurb }}</span>
+          <span class="card__title">{{ card.organization }}</span>
         </div>
       </a>
     </div>
