@@ -21,6 +21,7 @@
       display: block;
       font-size: $h6;
       margin: .5rem 0;
+      text-decoration: none;
     }
 
     .social-buttons__email {
@@ -97,6 +98,7 @@
   .button-container {
     a {
       padding: 0.65rem;
+      font-weight: $bold;
     }
   }
 }
