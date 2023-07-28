@@ -7,8 +7,9 @@
       {{ site.data.contentful.index.index[0].footer_blurb | markdownify }}
     </div>
     <div class="column large-4 small-12 footer--nav">
+      <a href="{{ '' | prepend: '/' | relative_url }}">Home</a>
       {% for nav_item in main_nav.nav_items %}
-        <a href="{{ nav_item.pretty_url | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
+        <a href="{{ nav_item.pretty_url | prepend: '/' | relative_url }}">{{nav_item.title}}</a>
       {% endfor %}
     </div>
   </div>
