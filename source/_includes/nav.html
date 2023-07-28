@@ -7,8 +7,8 @@
     </div>
   </div>
 
-  {{main_nav.nav_items}}
+  <a class="link" href="{{ '' | prepend: '/' | relative_url }}">Home</a>
   {% for nav_item in main_nav.nav_items %}
-    <a class="link" href="{{ nav_item.pretty_url | prepend: '/' | relative_url }}">{{nav_item.nav_item_title}}</a>
+    <a class="link" href="{{ nav_item.pretty_url | prepend: '/' | relative_url }}">{{nav_item.title}}</a>
   {% endfor %}
 </nav>
