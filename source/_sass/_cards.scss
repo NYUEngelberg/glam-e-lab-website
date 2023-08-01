@@ -167,8 +167,9 @@
   padding: 2rem;
 
   .card__icon {
-    height: 4rem;
+    height: 3rem;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .card__detail {
@@ -202,6 +203,13 @@
 .card--research {
   background-color: $white;
 
+  &:hover,
+  &:focus {
+    span {
+      color: $white !important;
+    }
+  }
+
   .card__detail {
     span {
       color: $black;
@@ -224,8 +232,7 @@
 /* PROJECT CARDS with image, title, description */
 .card--project,
 .card--book,
-.card--collaborator
- {
+.card--collaborator {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -317,11 +324,12 @@
     a {
       text-decoration: none;
     }
+
     span {
       font-family: $sans-serif;
       font-weight: $bold;
       display: block;
- 
+
     }
 
     text-align: center;
@@ -512,9 +520,16 @@
     font-size: $h3;
     letter-spacing: 0px;
     font-weight: $bold;
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
     display: block;
     color: $white;
+  }
+
+  .card__authors {
+
+    p {
+      color: $white !important;
+    }
   }
 
   .card__subtitle {
