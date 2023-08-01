@@ -34,6 +34,32 @@
   {% endif %}
 </div>
 <!-- END RESEARCH CARD -->
+{% elsif cards_type == "resource_cards" %}
+
+<div class="row expanded page-section--generic row--thin section--light-gray">
+  {% if cards %}
+  <div class="column large-12 small-12 card-section-heading">
+    <h2>{{ cards_heading }}</h2>
+    {% if cards_link_to and cards.link_to.size != 0 %}
+    <a class="link link--arrow" href="{{ cards_link_to | relative_url }}">{{cards_link_text}}</a>
+    {% endif %}
+  </div>
+  <div class="cards-wrapper">
+    {% for card in cards %}
+    <div class="card card--research card--resource">
+      <a class="card-link-wrapper" href="{{ card.pretty_url | prepend: 'products/' | relative_url }}">
+        <div class="card__icon" style="background-image: url({{ card.icon.url }})"></div>
+        <div class="card__detail">
+          <span class="card__title">{{ card.title }}</span>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+<!-- RESOURCE CARD with icon, title -->
+
 {% elsif cards_type == "project-news_cards" %}
 
   <div class="row expanded page-section--generic row--thin section--light-gray">
