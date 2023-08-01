@@ -47,14 +47,16 @@
 /* SHARED CARD STATES */
 .card--event,
 .card--research,
+.card--resource
 .card--project,
 .card--people,
 .card--book {
   &:hover {
-    background-color: $hover-accent;
+    
+    background-color: $hover-accent !important;
     color: $white;
 
-    a {
+    a, .card__title, .card__subtitle {
       color: $white;
     }
 
@@ -214,6 +216,16 @@
     span {
       color: $black;
     }
+  }
+}
+
+.card--resource {
+  .card__icon {
+    height: 3.5rem;
+    background-size: contain;
+  }
+  .card__detail > .card__title {
+    font-weight: $regular;
   }
 }
 
