@@ -25,16 +25,16 @@ top_bar: no-logo
         {% endcomment %}
       </div>
       <div class="button-container intro-button">
-        <a class="button button--arrow" href="{{ '/our-mission' | relative_url }}">About The GLAM-E Lab</a>
+        <a class="button button--arrow" href="{{ '/what-we-do' | relative_url }}">About The GLAM-E Lab</a>
       </div>
     </div>
     <div class="column large-6 large-offset-1 no-padding medium-12 small-12">
       <h2 class="heading-c">Get Started</h2>
 
-      {% include components/card-featured.html card=data.featured_research path="/outputs/" %}
+      {% include components/card-featured.html card=data.featured_research path="/products/" %}
 
       <div class="button-container button-container--right">
-        <a class="button button--arrow" href="{{ '/outputs' | relative_url  }}">All Open Access Guidelines</a>
+        <a class="button button--arrow" href="{{ '/open-access-guidelines' | relative_url  }}">All Open Access Guidelines</a>
       </div>
     </div>
   </div>
