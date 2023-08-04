@@ -76,7 +76,11 @@
 .card--people {
   padding: 0 1rem;
   display: block;
-
+  .bar {
+    margin: 1.5rem 0;  
+    width: 6.5rem !important;
+    height: 3rem !important;
+  }
   // height: 26.5rem;
   .card__avatar-wrapper {
     display: flex;
@@ -113,8 +117,7 @@
     }
 
     text-align: center;
-    padding: 1rem;
-    padding-bottom: 1.5rem;
+    padding: 1rem 2rem 2rem !important;
 
     span {
       margin: 0;

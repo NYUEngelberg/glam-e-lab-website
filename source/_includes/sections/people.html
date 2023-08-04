@@ -1,21 +1,21 @@
 {% assign people = include.people %}
 
-{% assign current_cards = people | where: 'type', 'Current' | sort: "last_name" %}
+{% assign current_cards = people | where: 'type', 'Team' | sort: "last_name" %}
 
 {% if current_cards and current_cards.size != 0%}
   {% include components/generic-card-layout.html 
     cards=current_cards
-    cards_heading="Current"
+    cards_heading="Team"
     cards_type="people_cards"
   %}
 {% endif %}
 
-{% assign alumni_cards = people | where: 'type', 'Alumni' | sort: "last_name"  %}
+{% assign alumni_cards = people | where: 'type', 'GLAM-E Alumni' | sort: "last_name"  %}
 
 {% if alumni_cards and alumni_cards.size != 0 %}
   {% include components/minimal-card-layout.html 
     cards=alumni_cards
-    cards_heading="Engelberg Center Community Alumni"
+    cards_heading="GLAM-E Alumni"
     cards_type="people_cards"
     cards_alumni=true 
   %}

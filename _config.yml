@@ -145,4 +145,7 @@ page_gen:
     template: 'profile'
     name: 'pretty_url'
     dir: 'who-we-are'
- 
+  - data: 'data.contentful.onTopic.onTopic'
+    template: 'topic'
+    name: 'pretty_url'
+    dir: ''
