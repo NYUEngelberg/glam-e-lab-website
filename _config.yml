@@ -148,4 +148,4 @@ page_gen:
   - data: 'data.contentful.onTopic.onTopic'
     template: 'topic'
     name: 'pretty_url'
-    dir: 'resources'
+    dir: ''
