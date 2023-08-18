@@ -52,7 +52,6 @@
 .card--people,
 .card--book {
   &:hover {
-    
     background-color: $hover-accent !important;
     color: $white;
 
@@ -61,11 +60,11 @@
     }
 
     .card__icon {
-      visibility: hidden;
+      filter: brightness(0) invert(1);
     }
 
     .card__image {
-      filter: grayscale(70%);
+      filter: grayscale(100%);
     }
   }
 }
@@ -76,6 +75,11 @@
 .card--people {
   padding: 0 1rem;
   display: block;
+  &:hover {
+    .bar {
+      filter: brightness(0) invert(1);
+    }
+  }
   .bar {
     margin: 1.5rem 0;  
     width: 6.5rem !important;
@@ -153,13 +157,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .card__detail {
-    // flex: 1 0 auto;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
   }
 }
 
@@ -256,10 +253,9 @@
     border-radius: 16px 16px 0 0;
     height: 15rem;
     min-height: 15rem;
-    background-size: contain;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0 2rem;
   }
 }
 
@@ -311,7 +307,7 @@
       }
 
       .card__image {
-        filter: grayscale(70%);
+        filter: grayscale(100%);
       }
     }
   }
@@ -369,12 +365,17 @@
 }
 
 .card {
-
   // global card styles
   .card__detail {
     padding: 1rem 2rem;
     overflow: hidden;
     font-weight: $light;
+  }
+  &:hover {
+    .card__detail {
+      color: #fff;
+      border-radius: 0 0 16px 16px;
+    }
   }
 
   .card__title {
