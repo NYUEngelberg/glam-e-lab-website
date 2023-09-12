@@ -7,7 +7,7 @@
 
   line-height: inherit;
   transition-duration: 0.4s;
-  font-family: $sans-serif;
+  @include cooper-hewit-bold;
   border: solid 1px $black;
   border-radius: 27px;
   padding: 0.5rem 1rem;
@@ -76,7 +76,7 @@
   }
 }
 
-.intro-button > .button {
+.intro-button>.button {
   width: fit-content;
   padding: .5rem 2rem;
 }

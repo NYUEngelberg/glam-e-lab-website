@@ -14,8 +14,7 @@
 
   .social-buttons-container {
     margin-top: 2rem;
-    font-family: $sans-serif;
-    font-weight: $bold;
+    @include cooper-hewit-bold;
 
     a {
       display: block;
@@ -97,7 +96,7 @@
 
   .button-container {
     a {
-      padding: 0.65rem;
+      padding: 0.85rem 0.65rem 0.65rem;
       font-weight: $bold;
     }
   }
