@@ -1,4 +1,18 @@
-$sans-serif: 'Cooper Hewitt', sans-serif;
+@font-face {
+  font-family: 'cooper-hewit-book';
+  src: url('../fonts/CooperHewitt-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cooper-hewit-bold';
+  src: url('../fonts/CooperHewitt-Bold.woff') format('woff');
+}
+
+$sans-serif: cooper-hewit-book, sans-serif;
+
+@mixin cooper-hewit-bold {
+  font-family: cooper-hewit-bold;
+}
 
 h1,
 h2,
@@ -6,8 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $sans-serif;
-  font-weight: 800;
+  @include cooper-hewit-bold;
 }
 
 h1,
@@ -28,7 +41,6 @@ $h5: 1.2rem;
 $h6: 1.1rem;
 $p: 1.2rem;
 $helper: 1rem;
-
 
 $bold: 800;
 $regular: 400;
@@ -63,17 +75,15 @@ h6 {
 p {
   font-size: $p;
   font-family: $sans-serif;
-  font-weight: 400;
 
   strong,
   b {
-    font-weight: $bold;
+    @include cooper-hewit-bold;
   }
 }
 
 .helper {
   font-size: $helper;
-
 }
 
 p.helper.inactive {
