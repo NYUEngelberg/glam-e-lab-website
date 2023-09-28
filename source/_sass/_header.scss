@@ -73,20 +73,20 @@
   height: 3.5rem;
   position: absolute;
   top: 0;
-  left: 47.5%;
+  left: 45%;
 
   @include breakpoint($medium-only) {
-    left: 45%;
-  }
-
-  @include breakpoint($small-only) {
     left: 40%;
   }
 
+  @include breakpoint($small-only) {
+    left: 35%;
+  }
+
   img {
-    height: 2.7rem;
+    height: 2.3rem;
     width: auto;
-    padding-top: 0.5rem;
+    padding-top: .7rem;
   }
 }
 
