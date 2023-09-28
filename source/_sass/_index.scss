@@ -2,33 +2,40 @@
   padding-bottom: 6rem;
 
   .top-section {
-    background-image: url('../images/test-header-index.png');
+    background-image: url('../images/index-bg.png');
     background-repeat: no-repeat;
-    background-position-x: 5rem;
-    background-size: 95%;
-    padding-bottom: 5rem;
+    // background-position-x: 5rem;
+    background-size: cover;
+    background-position: center;
+    padding-top: 9rem;
+    padding-bottom: 7rem;
 
     @include breakpoint($medium-only) {
-      background-image: none;
+      // background-image: none;
+    }
+
+    .heading-c {
+      color: $white;
+    }
+  }
+
+  .logo-container {
+    padding-top: 12rem;
+
+    @include breakpoint($medium-only) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
   }
 
   .main-header {
-    font-family: $sans-serif;
+
+    @include breakpoint($medium-only) {
+      text-align: center;
+    }
 
     img {
-      max-width: 100%;
-      height: auto;
-      display: inline-block;
-      vertical-align: middle;
-
-      @include breakpoint($medium-only) {
-        max-width: 50%;
-      }
-
-      @include breakpoint($small-only) {
-        max-width: 75%;
-      }
+      max-width: 22rem;
     }
 
     span {
@@ -54,7 +61,12 @@
 
   .card.card--featured {
     margin: 0.5rem 0;
+
+    .button-container {
+      text-align: right;
+    }
   }
+
 
   .button-container {
     display: flex;
@@ -65,10 +77,8 @@
     }
 
     &--right {
-      justify-content: right;
+      float: right;
     }
-
-    &--full-width {}
   }
 
   .card--podcast {
@@ -104,11 +114,7 @@
       padding-bottom: 5rem;
     }
 
-    .intro-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .intro-button {}
   }
 
   .inverted-section {

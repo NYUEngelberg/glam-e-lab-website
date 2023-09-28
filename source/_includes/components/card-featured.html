@@ -28,7 +28,8 @@
         <div class="tag tag--tag">{{ tag }}</div>
       {% endfor  %}
     </div>
- 
+    
+    {% comment %}
     <div class="card__authors">
       {% if card.full_author %}
         <span class="card__author">{{ card.full_author | markdownify }}</span>
@@ -41,6 +42,7 @@
 
      <!-- use named people,center authors, or full_authors? -->
     </div>
+    {% endcomment %}
   </div>
   {% if card.external_url and card.external_url.size != 0%}
       <a class="link-secondary card__title external-link" href="{{ card.external_url }}">

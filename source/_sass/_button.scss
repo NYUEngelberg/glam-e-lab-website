@@ -74,6 +74,21 @@
       filter: invert(100%);
     }
   }
+
+  &--inverted {
+    color: $white;
+    border-color: $white;
+
+    &:after {
+      content: url('../images/icons/arrow_forward_white_24dp.svg');
+    }
+
+    &:hover {
+      &:after {
+        filter: invert(0%);
+      }
+    }
+  }
 }
 
 .intro-button>.button {

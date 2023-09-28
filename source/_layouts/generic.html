@@ -35,10 +35,12 @@ top_bar: white
     {% include sections/people.html people=site.data.contentful.people.people %}
 
   {% elsif page.pretty_url == 'who-we-collaborate-with'%}
+    {% comment %}
     {% include components/generic-text-layout.html 
       heading=section.heading 
       content=page.body 
     %} 
+    {% endcomment %}
     {% include components/generic-card-layout.html 
         cards=page.pinned_research 
         cards_heading=page.pinned_title
