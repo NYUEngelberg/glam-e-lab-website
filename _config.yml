@@ -17,8 +17,8 @@ title: GLAM-E Lab
 email:
 description: > # this means to ignore newlines until "baseurl:"
 
-baseurl: "/glam-e-lab-website" # the subpath of your site, e.g. /blog
-url: "https://NYUEngelberg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://glamelab.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
 seo_image_path: '/images/og.png'
