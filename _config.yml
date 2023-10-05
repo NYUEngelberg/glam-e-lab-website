@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title:
+title: GLAM-E Lab
 email:
 description: > # this means to ignore newlines until "baseurl:"
 
@@ -21,7 +21,7 @@ baseurl: "/glam-e-lab-website" # the subpath of your site, e.g. /blog
 url: "https://objectively.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
-seo_image_path: #'/images/media/filename.jpg'
+seo_image_path: '/images/og.png'
 
 permalink: pretty
 # Build settings
@@ -141,6 +141,7 @@ page_gen:
     template: 'generic'
     name: 'pretty_url'
     dir: ''
+    customSeoDescription: 'seo_description'
   - data: 'data.contentful.people.people'
     template: 'profile'
     name: 'pretty_url'
@@ -149,3 +150,5 @@ page_gen:
     template: 'topic'
     name: 'pretty_url'
     dir: ''
+    customSeoImage: 'seo_image'
+    customSeoDescription: 'seo_description'
