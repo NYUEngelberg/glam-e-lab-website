@@ -65,9 +65,12 @@
 
   .product {
     &__left-column {
-      padding: 0;
       padding-top: 2.5rem;
       padding-bottom: 10rem;
+
+      @include breakpoint($small-only) {
+        padding-left: 0.5rem;
+      }
 
       h2,
       h3,
@@ -95,10 +98,9 @@
         margin: 3rem 0 2rem;
       }
 
-      // h3,
-      // h4,
-      // h5 {
-      // }
+      h4 {
+        color: $blue-100;
+      }
 
       ul,
       ol {
