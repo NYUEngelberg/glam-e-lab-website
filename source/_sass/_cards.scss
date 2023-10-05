@@ -85,8 +85,9 @@
 
   .bar {
     margin: 1.5rem 0;
-    width: 6.5rem !important;
+    // width: 6.5rem !important;
     height: 3rem !important;
+    background-size: contain;
   }
 
   // height: 26.5rem;
@@ -331,7 +332,7 @@
   }
 
   img {
-    width: 5.7rem;
+    width: 5.5rem;
     height: auto;
     display: inline-block;
     vertical-align: middle;
