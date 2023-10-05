@@ -1,1 +1,1 @@
-Sitemap: https://nyuengelberg.github.io/glam-e-lab-website/sitemap.xml
+Sitemap: https://glamelab.org/sitemap.xml
