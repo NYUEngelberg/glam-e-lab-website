@@ -30,6 +30,7 @@ markdown: kramdown
 #   - paragraph_end
 plugins:
   - jekyll-feed
+  - jekyll-analytics
 
 exclude:
   - Gemfile
@@ -152,3 +153,12 @@ page_gen:
     dir: ''
     customSeoImage: 'seo_image'
     customSeoDescription: 'seo_description'
+
+jekyll_analytics:
+  # GoogleAnalytics:          # Add, if you want to track with Google Analytics
+  #   id: UA-123-456          # Required - replace with your tracking id
+  #   anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
+  Plausible:
+    domain: 'glamelab.org'   # The domain configured in plausible
+    source: 'https://plausible.io/js/script.js' # The source of the javascript
