@@ -26,10 +26,10 @@ module UITemplate
 
   def create_table(title, body, caption)
     "<div class=\"table\">
-      <p class=\"table__title\">#{title}</p>
-      <div class=\"table__body\">#{markdownify_yaml(body)}</div>
-      <div class=\"table__caption\">#{markdownify_yaml(caption)}</div>
-    </div>"
+    <p class=\"table__title\">#{title unless title.nil?}</p>
+    <div class=\"table__body\">#{markdownify_yaml(body) unless body.nil?}</div>
+    <div class=\"table__caption\">#{markdownify_yaml(caption) unless caption.nil?}</div>
+  </div>"
   end
 
   def create_quote_html(content, attribution)
