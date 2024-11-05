@@ -12,6 +12,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "deploy": "gulp deploy",

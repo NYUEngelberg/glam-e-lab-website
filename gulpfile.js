@@ -121,15 +121,9 @@ gulp.task('test', gulp.series('test:html', 'test:es-lint'), done => {
 });
 
 /* =========================================
-  deploy
+  build for gh-actions
 ========================================= */
-gulp.task('circleci', () => gulp.src('.circleci/config.yml').pipe(gulp.dest('_site/.circleci/')));
-
-gulp.task('push-gh-main', shell.task(['git push origin main']));
-
-gulp.task('push-gh-pages', () => gulp.src('_site/**/*', { dot: true }).pipe(ghPages({ force: true })));
-
-gulp.task('deploy', gulp.series('build:prod', 'circleci', 'push-gh-main', 'push-gh-pages'));
+gulp.task('build', gulp.series('build:prod'));
 
 /* =========================================
   serve
